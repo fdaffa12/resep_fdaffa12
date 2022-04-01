@@ -1,5 +1,4 @@
 @extends('admin.layouts.master')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 @section('signa') active @endsection
 @section ('admin_content')
 <!-- ########## START: MAIN PANEL ########## -->
@@ -92,22 +91,6 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
-                                <div class="input-group control-group input-wrapper">
-                                    <select class="form-control select2" name="contoh[]"
-                                        data-placeholder="Choose Rumah Sakit">
-                                        <option label="Choose Rumah Sakit"></option>
-                                        @foreach($obats as $obat)
-                                        <option value="{{$obat->id}}">{{$obat->nama_obat}}</option>
-                                        @endforeach
-                                    </select>
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-success bs-add-button" type="button"><i
-                                                class="fa fa-plus"></i> Add</button>
-                                    </div>
-                                </div>
-                            </div>
-
                             <button type="submit" class="btn btn-primary">Add</button>
                         </form>
 
@@ -121,28 +104,3 @@
 </div><!-- sl-mainpanel -->
 <!-- ########## END: MAIN PANEL ########## -->
 @endsection
-
-<script>
-jQuery(document).ready(function() {
-    var maxLimit = 5;
-    var appendHTML =
-        '<div class="input-group control-group input-wrapper"><select class="form-control select2" name="contoh[]" data-placeholder="Choose Rumah Sakit" ><option label="Choose Rumah Sakit"></option>@foreach($obats as $obat)<option value="{{$obat->id}}">{{$obat-> nama_obat}}</option>@endforeach</select><button class="btn btn-danger bs-remove-button" type="button"><i class="fa fa-minus"></i>Remove</button></div></div></br>';
-    var x = 1;
-
-    // for addition
-    jQuery('.bs-add-button').click(function(e) {
-        e.preventDefault();
-        if (x < maxLimit) {
-            jQuery('.bs-form-wrapper').append(appendHTML);
-            x++;
-        }
-    });
-
-    // for deletion
-    jQuery('.bs-form-wrapper').on('click', '.bs-remove-button', function(e) {
-        e.preventDefault();
-        jQuery(this).parents('.input-wrapper').remove();
-        x--;
-    });
-});
-</script>

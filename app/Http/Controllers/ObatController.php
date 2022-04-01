@@ -69,6 +69,6 @@ class ObatController extends Controller
     public function Delete($obat_id)
     {
         Obat::find($obat_id)->delete();
-        return redirect()->back()->with('delete', 'obat deleted');
+        return redirect()->back()->with('delete', 'Obat deleted');
     }
 }

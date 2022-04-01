@@ -59,3 +59,5 @@ Route::post('racikans-add', 'RacikanController@store')->name('store.racikan');
 Route::get('racikans/edit/{racikan_id}', 'RacikanController@Edit');
 Route::post('racikans-update', 'RacikanController@UpdateRacikan')->name('update.racikan');
 Route::get('racikans/delete/{racikan_id}', 'RacikanController@Delete');
+
+Route::get('/pdf', 'PdfController@pdf')->name('print');
