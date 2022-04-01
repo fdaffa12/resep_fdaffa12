@@ -18,7 +18,7 @@ class CreateRacikansTable extends Migration
             $table->string('nama_racikan');
             $table->string('signa');
             $table->string('qty');
-            $table->integer('obat_id');
+            $table->string('obat_id');
             $table->timestamps();
         });
     }
