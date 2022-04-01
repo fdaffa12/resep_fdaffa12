@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2022 at 06:10 AM
+-- Generation Time: Apr 01, 2022 at 07:43 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -105,7 +105,13 @@ CREATE TABLE `obats` (
 --
 
 INSERT INTO `obats` (`id`, `nama_obat`, `stok`, `created_at`, `updated_at`, `status`) VALUES
-(2, 'Paracetamol', '40', '2022-03-31 05:41:55', NULL, 1);
+(2, 'Paracetamol', '40', '2022-03-31 05:41:55', NULL, 1),
+(3, 'Acarbose', '7000', '2022-03-31 21:37:07', NULL, 1),
+(4, 'Albumin', '342', '2022-03-31 21:37:17', NULL, 1),
+(5, 'Ambroxol', '3000', '2022-03-31 21:37:40', NULL, 1),
+(6, 'Biotin', '90', '2022-03-31 21:38:01', NULL, 1),
+(7, 'Decolgen', '3432', '2022-03-31 21:38:26', NULL, 1),
+(8, 'Ultra Flue', '4242', '2022-03-31 21:38:32', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -178,8 +184,7 @@ INSERT INTO `signas` (`id`, `signa`, `contoh`, `created_at`, `updated_at`) VALUE
 (15, '4 x sehari 0,5', '', '2022-03-31 05:34:47', NULL),
 (16, '4 x sehari 1', '', '2022-03-31 05:34:52', NULL),
 (17, '4 x sehari 2', '', '2022-03-31 05:35:01', NULL),
-(19, '4 x sehari 3', '', '2022-03-31 05:43:39', NULL),
-(23, '1 x sehari 0,5ds', '2,2,2', '2022-03-31 16:23:37', '2022-03-31 16:23:37');
+(19, '4 x sehari 3', '', '2022-03-31 05:43:39', NULL);
 
 -- --------------------------------------------------------
 
@@ -286,7 +291,7 @@ ALTER TABLE `nonracikans`
 -- AUTO_INCREMENT for table `obats`
 --
 ALTER TABLE `obats`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `racikans`
