@@ -8,11 +8,13 @@ ketik
 -   composer install
 -   npm install
 -   npm run dev
--   cp .env.example .env
+-   cp .env.example .env // (Buka file env isi DB_DATABASE menjadi nama database yang sudah dibuat (resep))
 -   php artisan key:generate
 -   php artisan config:cache
 
-Buka file env isi DB_DATABASE menjadi nama database yang sudah dibuat (resep)
+Jalankan aplikasi dengan membuka terminal dan tulis
+
+-   php artisan serve
 
 Terdapat dua autentikasi ada user dan admin
 
