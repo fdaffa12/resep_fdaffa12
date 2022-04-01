@@ -10,6 +10,7 @@ ketik
 -   npm run dev
 -   cp .env.example .env
 -   php artisan key:generate
+-   php artisan config:cache
 
 Buka file env isi DB_DATABASE menjadi nama database yang sudah dibuat (resep)
 
